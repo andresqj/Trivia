@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trivia App</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <header></header>
+  <main>
+    <section id="home">
+      <h1>Welcome to trivia App</h1>
+      <p>¿Are you ready to test your knowledge?</p>
+      <button id="start">Start challenge</button>
+    </section>
+
+    <section id="trivia" class="d-none">
+      <form id="form-trivia">
+        <div class="content-form"></div>
+        <div>
+          <button type="submit">Send</button>
+          <button type="button">Cancel</button>
+        </div>
+      </form>
+    </section>
+
+    <dialog id="modal">
+      <form id="form-create">
+        <div class="content-select">
+          <select name="categories" id="categories">
+            <option value="0">Categoría</option>
+          </select>
+          <i></i>
+        </div>
+        <div class="content-select">
+          <select name="difficulty" id="difficulty" required>
+            <option value="">Dificultad</option>
+            <option value="easy">Fácil</option>
+            <option value="medium">Intermedio</option>
+            <option value="hard">Difícil</option>
+          </select>
+          <i></i>
+        </div>
+        <div class="content-select">
+          <select name="type" id="type" required>
+            <option value="">Tipo de respuesta</option>
+            <option value="multiple">Selección multiple</option>
+            <option value="boolean">Verdadero / Falso</option>
+          </select>
+          <i></i>
+        </div>
+        <button type="submit">Iniciar</button>
+      </form>
+    </dialog>
+  </main>
+  
+  <!--  Axios cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js" integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="app.js" type="module"></script>
+</body>
+</html>
